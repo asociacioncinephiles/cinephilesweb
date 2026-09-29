@@ -27,53 +27,18 @@ header {
     top: 0;
     z-index: 1000;
     display: flex; 
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center; 
     padding: 20px 60px; 
     background-color: var(--fondo-blanco);
     box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra suave para separarlo del contenido */
 }
 
-/* --- ESTILOS DEL LOGO NUEVO --- */
-.logo-container { 
-    display: flex; 
-    align-items: center; /* Alinea la cámara y el texto al centro verticalmente */
-    gap: 15px; /* Crea un espacio de respiración entre el dibujo y las letras */
-}
-
-.logo-img {
-    height: 90px; /* Tamaño de la cámara */
-    width: auto;
-}
-
-.logo-texto {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.logo-title { 
-    font-family: 'Playfair Display', serif; 
-    font-size: 29px; /* Aumentado un 20% */
-    letter-spacing: 4px; 
-    margin: 0; 
-    font-weight: 400; 
-    color: #000; 
-    white-space: nowrap; /* Obliga al texto a quedarse en una sola línea */
-}
-
-.logo-subtitle { 
-    font-size: 12px; /* Aumentado un 20% */
-    letter-spacing: 3px; 
-    color: var(--texto-gris); 
-    margin-bottom: 5px; /* El subtítulo empuja hacia abajo al título principal */
-}
-
 /* --- ESTILOS NAVEGACIÓN Y MENÚ CENTRADO --- */
 nav {
     display: flex;
     justify-content: center;
-    flex: 1;
+    width: 100%;
 }
 
 nav ul { 
@@ -84,7 +49,6 @@ nav ul {
     gap: 35px; 
     margin: 0; 
     padding: 0; 
-    width: 100%;
 }
 
 nav a { 
@@ -378,15 +342,6 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
 .red-icon-link:hover {
     transform: scale(1.15) translateY(-3px);
 }
-/* Clase para el efecto espejo horizontal del logo izquierdo */
-.logo-volteado {
-    /* Volteo horizontal (efecto espejo) */
-    transform: scaleX(-1); 
-    
-    /* Mantenemos la transición suave si ya la tenías */
-    transition: transform 0.3s ease; 
-}
-
 
 /* ========================================= */
 /* --- ESTILOS PARA LA PÁGINA DEL CORTO --- */
