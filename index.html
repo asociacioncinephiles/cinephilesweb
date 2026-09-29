@@ -1,313 +1,293 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Cinephiles - Asociación Cultural</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <title>Cinephiles - Asociación Cultural</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN FIJO -->
-    <header>
-        <div class="logo-container">
-            <!-- Aquí insertamos tu logotipo -->
-            <img src="logo-Cinephiles.png" alt="Logotipo Cinephiles" class="logo-img">
-            
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#quienes-somos">Quiénes somos</a></li>
-                <li><a href="#talleres">Talleres</a></li>
-                <li><a href="#filmoteca">Filmoteca</a></li>
-                <li><a href="#colaboradores">Colaboradores</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- MENÚ DE NAVEGACIÓN FIJO -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quiénes somos</a></li>
+                <li><a href="#talleres">Talleres</a></li>
+                <li><a href="#filmoteca">Filmoteca</a></li>
+                <li><a href="#colaboradores">Colaboradores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <!-- SECCIÓN 1: INICIO -->
+        <section id="inicio" class="seccion bg-claro">
+            <div class="linea-roja"></div>
+            <div class="seccion-pretitle">Asociación Cultural</div>
+            <h1 class="seccion-title">CINEPHILES</h1>
+            <h2 class="seccion-subtitle">Locos por el cine y la fotografía</h2>
+            <p class="seccion-text">Si te pasas el día hablando de películas o buscando el encuadre perfecto con la cámara, estás en el lugar indicado. Cinephiles es nuestra comunidad audiovisual. Aquí venimos a compartir ideas, aprender unos de otros y sacar adelante esos proyectos que tienes en la cabeza.</p>
+            <div class="botones">
+                <a href="#quienes-somos" class="btn btn-primario">Conócenos &rarr;</a>
+                <a href="#filmoteca" class="btn btn-secundario">Ver filmoteca &rarr;</a>
+            </div>
+        </section>
 
-    <main>
-        <!-- SECCIÓN 1: INICIO -->
-        <section id="inicio" class="seccion bg-claro">
-            <div class="linea-roja"></div>
-            <div class="seccion-pretitle">Asociación Cultural</div>
-            <h1 class="seccion-title">CINEPHILES</h1>
-            <h2 class="seccion-subtitle">Locos por el cine y la fotografía</h2>
-            <p class="seccion-text">Si te pasas el día hablando de películas o buscando el encuadre perfecto con la cámara, estás en el lugar indicado. Cinephiles es nuestra comunidad audiovisual. Aquí venimos a compartir ideas, aprender unos de otros y sacar adelante esos proyectos que tienes en la cabeza.</p>
-            <div class="botones">
-                <a href="#quienes-somos" class="btn btn-primario">Conócenos &rarr;</a>
-                <a href="#filmoteca" class="btn btn-secundario">Ver filmoteca &rarr;</a>
-            </div>
-        </section>
+        <!-- SECCIÓN 2: QUIÉNES SOMOS -->
+        <section id="quienes-somos" class="seccion bg-blanco">
+            <div class="linea-roja"></div>
+            <h1 class="seccion-title">Nuestra Filosofía</h1>
+            <h2 class="seccion-subtitle">Buscamos el encuadre perfecto</h2>
+            <p class="seccion-text">Básicamente, somos un grupo de gente apasionada por la imagen. Lo que buscamos es sencillo: aprender, debatir con sentido crítico y rodar juntos. Hacemos las cosas de forma accesible y siempre haciendo equipo.</p>
+        </section>
 
-        <!-- SECCIÓN 2: QUIÉNES SOMOS -->
-        <section id="quienes-somos" class="seccion bg-blanco">
-            <div class="linea-roja"></div>
-            <h1 class="seccion-title">Nuestra Filosofía</h1>
-            <h2 class="seccion-subtitle">Buscamos el encuadre perfecto</h2>
-            <p class="seccion-text">Básicamente, somos un grupo de gente apasionada por la imagen. Lo que buscamos es sencillo: aprender, debatir con sentido crítico y rodar juntos. Hacemos las cosas de forma accesible y siempre haciendo equipo.</p>
-        </section>
-
-       <!-- SECCIÓN 3: TALLERES -->
+       <!-- SECCIÓN 3: TALLERES -->
 <section id="talleres" class="seccion bg-claro">
-    <div class="linea-roja"></div>
-    <h1 class="seccion-title">Talleres</h1>
-    <h2 class="seccion-subtitle">Exclusivo para asociados</h2>
-    <p class="seccion-text">Si te unes, vas a poder participar en nuestras actividades regulares:</p>
-    
-    <div class="talleres-contenedor">
-        
-        <!-- Taller 1: Cinefórum (Proyector SVG) -->
-        <div class="taller-caja">
-            <h3 class="taller-titulo">Cinefórum</h3>
-            
-            <!-- Icono SVG Proyector -->
-            <svg class="taller-icono" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Rollo izquierdo -->
-                <circle cx="35" cy="30" r="16" fill="var(--texto-oscuro)"/>
-                <circle cx="35" cy="30" r="4" fill="var(--fondo-blanco)"/>
-                <!-- Rollo derecho -->
-                <circle cx="75" cy="35" r="14" fill="var(--texto-oscuro)"/>
-                <circle cx="75" cy="35" r="3" fill="var(--fondo-blanco)"/>
-                <!-- Cuerpo y lente -->
-                <rect x="25" y="50" width="45" height="35" rx="4" fill="var(--texto-oscuro)"/>
-                <polygon points="70,60 90,55 90,80 70,75" fill="var(--texto-oscuro)"/>
-                <rect x="30" y="85" width="35" height="5" fill="var(--texto-oscuro)"/>
-            </svg>
+    <div class="linea-roja"></div>
+    <h1 class="seccion-title">Talleres</h1>
+    <h2 class="seccion-subtitle">Exclusivo para asociados</h2>
+    <p class="seccion-text">Si te unes, vas a poder participar en nuestras actividades regulares:</p>
+    
+    <div class="talleres-contenedor">
+        
+        <!-- Taller 1: Cinefórum (Proyector SVG) -->
+        <div class="taller-caja">
+            <h3 class="taller-titulo">Cinefórum</h3>
+            
+            <!-- Icono SVG Proyector -->
+            <svg class="taller-icono" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Rollo izquierdo -->
+                <circle cx="35" cy="30" r="16" fill="var(--texto-oscuro)"/>
+                <circle cx="35" cy="30" r="4" fill="var(--fondo-blanco)"/>
+                <!-- Rollo derecho -->
+                <circle cx="75" cy="35" r="14" fill="var(--texto-oscuro)"/>
+                <circle cx="75" cy="35" r="3" fill="var(--fondo-blanco)"/>
+                <!-- Cuerpo y lente -->
+                <rect x="25" y="50" width="45" height="35" rx="4" fill="var(--texto-oscuro)"/>
+                <polygon points="70,60 90,55 90,80 70,75" fill="var(--texto-oscuro)"/>
+                <rect x="30" y="85" width="35" height="5" fill="var(--texto-oscuro)"/>
+            </svg>
 
-            <div class="taller-overlay">
-                <h4 class="taller-overlay-titulo">Cinefórum</h4>
-                <p class="taller-desc">Montamos ciclos temáticos de tres películas. Las vemos y luego las comentamos a fondo. Las propuestas pueden venir de socios individuales o del responsable del taller.</p>
-            </div>
-        </div>
+            <div class="taller-overlay">
+                <h4 class="taller-overlay-titulo">Cinefórum</h4>
+                <p class="taller-desc">Montamos ciclos temáticos de tres películas. Las vemos y luego las comentamos a fondo. Las propuestas pueden venir de socios individuales o del responsable del taller.</p>
+            </div>
+        </div>
 
-        <!-- Taller 2: Fotografía (Cámara SVG) -->
-        <div class="taller-caja">
-            <h3 class="taller-titulo">Fotografía</h3>
-            
-            <!-- Icono SVG Cámara -->
-            <svg class="taller-icono" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Flash / Parte superior -->
-                <rect x="32" y="25" width="36" height="15" rx="4" fill="var(--texto-oscuro)"/>
-                <!-- Cuerpo -->
-                <rect x="15" y="35" width="70" height="45" rx="6" fill="var(--texto-oscuro)"/>
-                <!-- Objetivo -->
-                <circle cx="50" cy="57" r="16" fill="var(--fondo-blanco)"/>
-                <circle cx="50" cy="57" r="10" fill="var(--texto-oscuro)"/>
-                <!-- Detalle (botón) -->
-                <circle cx="72" cy="45" r="3.5" fill="var(--fondo-blanco)"/>
-            </svg>
+        <!-- Taller 2: Fotografía (Cámara SVG) -->
+        <div class="taller-caja">
+            <h3 class="taller-titulo">Fotografía</h3>
+            
+            <!-- Icono SVG Cámara -->
+            <svg class="taller-icono" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Flash / Parte superior -->
+                <rect x="32" y="25" width="36" height="15" rx="4" fill="var(--texto-oscuro)"/>
+                <!-- Cuerpo -->
+                <rect x="15" y="35" width="70" height="45" rx="6" fill="var(--texto-oscuro)"/>
+                <!-- Objetivo -->
+                <circle cx="50" cy="57" r="16" fill="var(--fondo-blanco)"/>
+                <circle cx="50" cy="57" r="10" fill="var(--texto-oscuro)"/>
+                <!-- Detalle (botón) -->
+                <circle cx="72" cy="45" r="3.5" fill="var(--fondo-blanco)"/>
+            </svg>
 
-            <div class="taller-overlay">
-                <h4 class="taller-overlay-titulo">Fotografía</h4>
-                <p class="taller-desc">Para que domines tu cámara. Mezclamos la teoría necesaria con mucha práctica porque si no practicas no aprendes.</p>
-            </div>
-        </div>
+            <div class="taller-overlay">
+                <h4 class="taller-overlay-titulo">Fotografía</h4>
+                <p class="taller-desc">Para que domines tu cámara. Mezclamos la teoría necesaria con mucha práctica porque si no practicas no aprendes.</p>
+            </div>
+        </div>
 
-        <!-- Taller 3: Cortometraje (Fotograma SVG Horizontal) -->
-        <div class="taller-caja">
-            <h3 class="taller-titulo">Cortometraje</h3>
-            
-            <!-- Icono SVG Fotograma 35mm Horizontal -->
-            <svg class="taller-icono" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Tira de película (Cuerpo apaisado) -->
-                <rect x="10" y="25" width="80" height="50" rx="4" fill="var(--texto-oscuro)"/>
-                
-                <!-- Pantalla central apaisada -->
-                <rect x="20" y="38" width="60" height="24" rx="2" fill="var(--fondo-blanco)"/>
-                
-                <!-- Agujeros de arrastre (Sprockets) Superior -->
-                <rect x="15" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="27" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="39" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="51" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="63" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="75" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
-                
-                <!-- Agujeros de arrastre Inferior -->
-                <rect x="15" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="27" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="39" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="51" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="63" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
-                <rect x="75" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
-            </svg>
+        <!-- Taller 3: Cortometraje (Fotograma SVG Horizontal) -->
+        <div class="taller-caja">
+            <h3 class="taller-titulo">Cortometraje</h3>
+            
+            <!-- Icono SVG Fotograma 35mm Horizontal -->
+            <svg class="taller-icono" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tira de película (Cuerpo apaisado) -->
+                <rect x="10" y="25" width="80" height="50" rx="4" fill="var(--texto-oscuro)"/>
+                
+                <!-- Pantalla central apaisada -->
+                <rect x="20" y="38" width="60" height="24" rx="2" fill="var(--fondo-blanco)"/>
+                
+                <!-- Agujeros de arrastre (Sprockets) Superior -->
+                <rect x="15" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="27" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="39" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="51" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="63" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="75" y="30" width="6" height="4" fill="var(--fondo-blanco)"/>
+                
+                <!-- Agujeros de arrastre Inferior -->
+                <rect x="15" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="27" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="39" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="51" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="63" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
+                <rect x="75" y="66" width="6" height="4" fill="var(--fondo-blanco)"/>
+            </svg>
 
-            <div class="taller-overlay">
-                <h4 class="taller-overlay-titulo">Cortometraje</h4>
-                <p class="taller-desc">Te enseñamos el proceso de producción de principio a fin. Desde que apuntas la primera idea hasta que ves el resultado en pantalla.</p>
-            </div>
-        </div>
+            <div class="taller-overlay">
+                <h4 class="taller-overlay-titulo">Cortometraje</h4>
+                <p class="taller-desc">Te enseñamos el proceso de producción de principio a fin. Desde que apuntas la primera idea hasta que ves el resultado en pantalla.</p>
+            </div>
+        </div>
 
-    </div>
+    </div>
 </section>
 
-
-       <!-- SECCIÓN 4: FILMOTECA -->
+       <!-- SECCIÓN 4: FILMOTECA -->
 <section id="filmoteca" class="seccion bg-blanco">
-    <div class="linea-roja"></div>
-    <h1 class="seccion-title">Nuestra Filmoteca</h1>
-    <h2 class="seccion-subtitle">Proyectos audiovisuales</h2>
-    <p class="seccion-text">Aquí puedes echar un vistazo a lo que ya hemos hecho. Son cortometrajes, proyectos colaborativos y ejercicios prácticos creados íntegramente por los miembros de la asociación.</p>
+    <div class="linea-roja"></div>
+    <h1 class="seccion-title">Nuestra Filmoteca</h1>
+    <h2 class="seccion-subtitle">Proyectos audiovisuales</h2>
+    <p class="seccion-text">Aquí puedes echar un vistazo a lo que ya hemos hecho. Son cortometrajes, proyectos colaborativos y ejercicios prácticos creados íntegramente por los miembros de la asociación.</p>
 
-    <!-- Carrusel (ordenado de más reciente a más antiguo en el código) -->
-    <div class="carrusel-contenedor">
-        
-        <!-- Proyecto: 2026 -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2026</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-desconectados.html">
-                <img src="cartel-desconectados.jpg" alt="Cartel (Des)Conectados" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">(Des)Conectados</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">PRÓXIMAMENTE</a>
-        </div>
+    <!-- Carrusel (ordenado de más reciente a más antiguo en el código) -->
+    <div class="carrusel-contenedor">
+        
+        <!-- Proyecto: 2026 -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2026</span>
+            <a href="corto-desconectados.html">
+                <img src="cartel-desconectados.jpg" alt="Cartel (Des)Conectados" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">(Des)Conectados</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">PRÓXIMAMENTE</a>
+        </div>
 
-        <!-- Proyecto: 2025 -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2025</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-sinceramente.html">
-                <img src="cartel-sinceramente.jpg" alt="Cartel Sinceramente" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">Sinceramente</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">PRÓXIMAMENTE</a>
-        </div>
+        <!-- Proyecto: 2025 -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2025</span>
+            <a href="corto-sinceramente.html">
+                <img src="cartel-sinceramente.jpg" alt="Cartel Sinceramente" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">Sinceramente</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">PRÓXIMAMENTE</a>
+        </div>
 
-        <!-- Proyecto: 2024 -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2024</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-haiku.html">
-                <img src="cartel-haiku.jpg" alt="Cartel Haiku" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">Haiku</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
-        </div>
+        <!-- Proyecto: 2024 -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2024</span>
+            <a href="corto-haiku.html">
+                <img src="cartel-haiku.jpg" alt="Cartel Haiku" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">Haiku</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
+        </div>
 
-        <!-- Proyecto: 2019 -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2019</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-barco.html">
-                <img src="cartel-barco.jpg" alt="Cartel Barco" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">El barco en la botella</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
-        </div>
+        <!-- Proyecto: 2019 -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2019</span>
+            <a href="corto-barco.html">
+                <img src="cartel-barco.jpg" alt="Cartel Barco" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">El barco en la botella</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
+        </div>
 
-        <!-- Proyecto: 2018 (Secuestro) -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2019</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-secuestro.html">
-                <img src="cartel-secuestro.jpg" alt="Cartel Secuestro" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">El secuestro</h3>
-            <a href="https://www.youtube.com/watch?v=T5q8-gu4nyQ" target="_blank" class="btn-ver">Ver Trailer</a>
-        </div>
+        <!-- Proyecto: 2018 (Secuestro) -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2019</span>
+            <a href="corto-secuestro.html">
+                <img src="cartel-secuestro.jpg" alt="Cartel Secuestro" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">El secuestro</h3>
+            <a href="https://www.youtube.com/watch?v=T5q8-gu4nyQ" target="_blank" class="btn-ver">Ver Trailer</a>
+        </div>
 
 
-        <!-- Proyecto: 2018 (Privada) -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2018</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-privada.html">
-                <img src="cartel-privada.jpg" alt="Cartel Privada" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">Privada de su privacidad</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
-        </div>
+        <!-- Proyecto: 2018 (Privada) -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2018</span>
+            <a href="corto-privada.html">
+                <img src="cartel-privada.jpg" alt="Cartel Privada" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">Privada de su privacidad</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
+        </div>
 
-        <!-- Proyecto: 2017 (Documental Aniversario) -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2017</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-25-aniversario.html">
-                <img src="cartel-25-aniversario.jpg" alt="Cartel 25 Aniversario Estrella de Elola" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">25 Años C.O. Estrella de Elola</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
-        </div>
+        <!-- Proyecto: 2017 (Documental Aniversario) -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2017</span>
+            <a href="corto-25-aniversario.html">
+                <img src="cartel-25-aniversario.jpg" alt="Cartel 25 Aniversario Estrella de Elola" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">25 Años C.O. Estrella de Elola</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
+        </div>
 
-        <!-- Proyecto: 2017 (Documental Alzhéimer) -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2017</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-alzheimer.html">
-                <img src="cartel-alzheimer.jpg" alt="Cartel Alzhéimer en positivo" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">Alzhéimer en positivo</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
-        </div>
+        <!-- Proyecto: 2017 (Documental Alzhéimer) -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2017</span>
+            <a href="corto-alzheimer.html">
+                <img src="cartel-alzheimer.jpg" alt="Cartel Alzhéimer en positivo" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">Alzhéimer en positivo</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
+        </div>
 
-        <!-- Proyecto: 2016 -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2016</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-cafesinato.html">
-                <img src="cartel-cafesinato.jpg" alt="Cartel Cafesinato" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">Cafesinato</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
-        </div>
+        <!-- Proyecto: 2016 -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2016</span>
+            <a href="corto-cafesinato.html">
+                <img src="cartel-cafesinato.jpg" alt="Cartel Cafesinato" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">Cafesinato</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
+        </div>
 
-        <!-- Proyecto: 2014 -->
-        <div class="carrusel-item">
-            <span class="carrusel-año">2014</span>
-            <!-- Enlace añadido alrededor del cartel -->
-            <a href="corto-fumar-mata.html">
-                <img src="cartel-fumar-mata.jpg" alt="Cartel Fumar mata" class="carrusel-cartel">
-            </a>
-            <h3 class="carrusel-titulo">Fumar mata</h3>
-            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
-        </div>
+        <!-- Proyecto: 2014 -->
+        <div class="carrusel-item">
+            <span class="carrusel-año">2014</span>
+            <a href="corto-fumar-mata.html">
+                <img src="cartel-fumar-mata.jpg" alt="Cartel Fumar mata" class="carrusel-cartel">
+            </a>
+            <h3 class="carrusel-titulo">Fumar mata</h3>
+            <a href="https://youtube.com" target="_blank" class="btn-ver">Ver en YouTube</a>
+        </div>
 
-    </div>
+    </div>
 
 </section>
 
-        <!-- SECCIÓN 5: COLABORADORES -->
+        <!-- SECCIÓN 5: COLABORADORES -->
 <section id="colaboradores" class="seccion bg-claro">
-    <div class="linea-roja"></div>
-    <h1 class="seccion-title">Colaboradores</h1>
-    <h2 class="seccion-subtitle">Entidades que nos apoyan</h2>
-    <p class="seccion-text">Agradecemos el apoyo institucional y privado que hace posible llevar a cabo nuestros proyectos y talleres.</p>
+    <div class="linea-roja"></div>
+    <h1 class="seccion-title">Colaboradores</h1>
+    <h2 class="seccion-subtitle">Entidades que nos apoyan</h2>
+    <p class="seccion-text">Agradecemos el apoyo institucional y privado que hace posible llevar a cabo nuestros proyectos y talleres.</p>
 
-    <div class="colaboradores-contenedor">
-        
-        <!-- Colaborador 1: Ayuntamiento de Ciempozuelos -->
-        <a href="https://www.ayto-ciempozuelos.org" target="_blank" rel="noopener" class="colaborador-item">
-            <img src="logo-ayto-ciempozuelos.png" alt="Ayuntamiento de Ciempozuelos" class="colaborador-logo">
-        </a>
+    <div class="colaboradores-contenedor">
+        
+        <!-- Colaborador 1: Ayuntamiento de Ciempozuelos -->
+        <a href="https://www.ayto-ciempozuelos.org" target="_blank" rel="noopener" class="colaborador-item">
+            <img src="logo-ayto-ciempozuelos.png" alt="Ayuntamiento de Ciempozuelos" class="colaborador-logo">
+        </a>
 
-        <!-- Colaborador 2: Fundación Orona -->
-        <a href="https://www.orona-group.com" target="_blank" rel="noopener" class="colaborador-item">
-            <img src="logo-fundacion-orona.png" alt="Fundación Orona" class="colaborador-logo">
-        </a>
+        <!-- Colaborador 2: Fundación Orona -->
+        <a href="https://www.orona-group.com" target="_blank" rel="noopener" class="colaborador-item">
+            <img src="logo-fundacion-orona.png" alt="Fundación Orona" class="colaborador-logo">
+        </a>
 
-    </div>
+    </div>
 </section>
 
-
-     <!-- SECCIÓN 6: CONTACTO -->
+     <!-- SECCIÓN 6: CONTACTO -->
 <section id="contacto" class="seccion bg-blanco">
-    <div class="linea-roja"></div>
-    <h1 class="seccion-title">Contacto</h1>
-    <h2 class="seccion-subtitle">¿Hablamos?</h2>
-    <p class="seccion-text">Si quieres unirte a la asociación, proponernos una colaboración o simplemente resolver alguna duda sobre nuestros talleres, mándanos un mensaje y te responderemos lo antes posible.</p>
+    <div class="linea-roja"></div>
+    <h1 class="seccion-title">Contacto</h1>
+    <h2 class="seccion-subtitle">¿Hablamos?</h2>
+    <p class="seccion-text">Si quieres unirte a la asociación, proponernos una colaboración o simplemente resolver alguna duda sobre nuestros talleres, mándanos un mensaje y te responderemos lo antes posible.</p>
 
-    <!-- Botón directo para abrir el gestor de correo del usuario -->
-    <div class="botones">
-        <a href="mailto:asociacion.cinephiles@gmail.com" class="btn btn-primario">Escríbenos un correo</a>
-    </div>
+    <!-- Botón directo para abrir el gestor de correo del usuario -->
+    <div class="botones">
+        <a href="mailto:asociacion.cinephiles@gmail.com" class="btn btn-primario">Escríbenos un correo</a>
+    </div>
 </section>
 
-    </main>
+    </main>
 
 </body>
 </html>
-
