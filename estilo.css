@@ -19,6 +19,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--texto-oscuro);
     background-color: var(--fondo-claro);
+    overflow-x: hidden; /* Evita desplazamientos laterales no deseados */
 }
 
 /* Menú FIJO en la parte superior */
@@ -54,7 +55,7 @@ nav ul {
 nav a { 
     text-decoration: none; 
     color: var(--texto-gris); 
-    font-size: 17px; /* Aumentado un 20% */
+    font-size: 17px; 
     padding-bottom: 5px; 
     transition: color 0.3s; 
     text-align: center;
@@ -68,10 +69,11 @@ nav a:hover {
 /* Secciones individuales */
 .seccion {
     display: flex; flex-direction: column; align-items: center; text-align: center;
-    padding: 100px 20px; /* Espacio grande arriba y abajo */
-    min-height: 70vh; /* Cada sección ocupa al menos el 70% de la pantalla */
+    padding: 100px 20px; 
+    min-height: 70vh; 
     justify-content: center;
-    scroll-margin-top: 80px; /* Evita que el menú fijo tape el título al hacer clic */
+    scroll-margin-top: 80px; 
+    box-sizing: border-box;
 }
 
 /* Alternamos colores de fondo para diferenciar las secciones */
@@ -79,10 +81,10 @@ nav a:hover {
 .bg-claro { background-color: var(--fondo-claro); }
 
 .linea-roja { width: 40px; height: 2px; background-color: var(--rojo-cine); margin-bottom: 20px; }
-.seccion-pretitle { font-size: 14px; /* Aumentado un 20% */ letter-spacing: 4px; color: var(--texto-gris); margin-bottom: 10px; text-transform: uppercase; }
-.seccion-title { font-family: 'Playfair Display', serif; font-size: 72px; /* Aumentado un 20% */ margin: 0; font-weight: 400; color: #000; }
-.seccion-subtitle { font-family: 'Playfair Display', serif; font-style: italic; font-size: 38px; /* Aumentado un 20% */ margin: 10px 0 30px 0; color: #222; }
-.seccion-text { font-size: 19px; /* Aumentado un 20% */ line-height: 1.8; color: var(--texto-gris); font-weight: 300; margin-bottom: 40px; max-width: 800px; }
+.seccion-pretitle { font-size: 14px; letter-spacing: 4px; color: var(--texto-gris); margin-bottom: 10px; text-transform: uppercase; }
+.seccion-title { font-family: 'Playfair Display', serif; font-size: 72px; margin: 0; font-weight: 400; color: #000; }
+.seccion-subtitle { font-family: 'Playfair Display', serif; font-style: italic; font-size: 38px; margin: 10px 0 30px 0; color: #222; }
+.seccion-text { font-size: 19px; line-height: 1.8; color: var(--texto-gris); font-weight: 300; margin-bottom: 40px; max-width: 800px; }
 
 /* Listas (para talleres y filmoteca) */
 ul.lista-contenidos { text-align: left; max-width: 600px; margin: 0 auto 40px auto; line-height: 1.8; font-weight: 300; color: var(--texto-gris); }
@@ -91,7 +93,7 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
 
 /* Botones */
 .botones { display: flex; gap: 20px; justify-content: center; }
-.btn { padding: 15px 30px; font-size: 14px; /* Aumentado un 20% */ letter-spacing: 2px; text-decoration: none; text-transform: uppercase; transition: 0.3s; }
+.btn { padding: 15px 30px; font-size: 14px; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; transition: 0.3s; }
 .btn-primario { background-color: var(--rojo-cine); color: #fff; border: 1px solid var(--rojo-cine); }
 .btn-primario:hover { background-color: #7a1d25; }
 .btn-secundario { background-color: transparent; color: var(--texto-oscuro); border: 1px solid var(--texto-oscuro); }
@@ -100,69 +102,38 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
 /* --- ESTILOS PARA EL CARRUSEL DE LA FILMOTECA --- */
 .carrusel-contenedor {
     display: flex;
-    flex-direction: row-reverse; /* Inicia el carrusel a la derecha mostrando los proyectos más recientes primero */
+    flex-direction: row-reverse; 
     gap: 30px;
-    overflow-x: auto; /* Permite hacer scroll horizontal */
+    overflow-x: auto; 
     padding: 20px 10px;
     max-width: 1000px;
     width: 100%;
-    scroll-snap-type: x mandatory; /* El scroll encaja en cada tarjeta */
+    scroll-snap-type: x mandatory; 
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
-/* Personaliza la barra de desplazamiento horizontal */
-.carrusel-contenedor::-webkit-scrollbar {
-    height: 8px;
-}
-.carrusel-contenedor::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 4px;
-}
-.carrusel-contenedor::-webkit-scrollbar-thumb {
-    background: var(--rojo-cine); 
-    border-radius: 4px;
-}
+.carrusel-contenedor::-webkit-scrollbar { height: 8px; }
+.carrusel-contenedor::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+.carrusel-contenedor::-webkit-scrollbar-thumb { background: var(--rojo-cine); border-radius: 4px; }
 
 .carrusel-item {
-    flex: 0 0 250px; /* Ancho fijo para cada tarjeta (póster) */
+    flex: 0 0 250px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    scroll-snap-align: start; /* Ancla el scroll a la tarjeta */
+    scroll-snap-align: start; 
     background-color: var(--fondo-claro);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-sizing: border-box;
 }
 
-.carrusel-año {
-    font-size: 17px; /* Aumentado un 20% */
-    font-weight: 500;
-    color: var(--rojo-cine);
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-.carrusel-cartel {
-    width: 100%;
-    height: 350px;
-    object-fit: cover; /* Evita que la imagen se deforme */
-    border-radius: 4px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.carrusel-titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px; /* Aumentado un 20% */
-    margin: 0 0 15px 0;
-    color: var(--texto-oscuro);
-    min-height: 48px; /* Alinea los botones aunque el título ocupe dos líneas */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.carrusel-año { font-size: 17px; font-weight: 500; color: var(--rojo-cine); margin-bottom: 10px; letter-spacing: 2px; }
+.carrusel-cartel { width: 100%; height: 350px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.carrusel-titulo { font-family: 'Playfair Display', serif; font-size: 24px; margin: 0 0 15px 0; color: var(--texto-oscuro); min-height: 48px; display: flex; align-items: center; justify-content: center; }
 
 .btn-ver {
     display: inline-block;
@@ -170,31 +141,30 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
     background-color: var(--texto-oscuro);
     color: #fff;
     text-decoration: none;
-    font-size: 13px; /* Aumentado un 20% */
+    font-size: 13px; 
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
-.btn-ver:hover {
-    background-color: var(--rojo-cine);
-}
+.btn-ver:hover { background-color: var(--rojo-cine); }
 
 /* --- ESTILOS PARA LAS CAJAS DE TALLERES --- */
 .talleres-contenedor {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Separación limpia y pareja entre las cajas */
+    gap: 40px; 
     flex-wrap: nowrap; 
     max-width: 1000px; 
     width: 100%;
     margin: 40px auto 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .taller-caja {
-    flex: 0 0 280px; /* Fuerza a que las 3 cajas tengan un ancho idéntico */
+    flex: 0 0 280px; 
     height: 420px; 
     background-color: var(--fondo-blanco);
     border-radius: 8px;
@@ -207,38 +177,17 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
     overflow: hidden; 
     border: 2px solid var(--rojo-cine); 
     cursor: default;
+    box-sizing: border-box;
 }
 
-.taller-titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 29px; /* Aumentado un 20% */
-    color: var(--texto-oscuro);
-    text-align: center;
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0;
-}
+.taller-titulo { font-family: 'Playfair Display', serif; font-size: 29px; color: var(--texto-oscuro); text-align: center; padding-top: 50px; padding-left: 20px; padding-right: 20px; margin: 0; }
+.taller-icono { width: 110px; height: auto; margin-top: 60px; transition: transform 0.3s ease; }
+.taller-caja:hover .taller-icono { transform: scale(1.1); }
 
-.taller-icono {
-    width: 110px;
-    height: auto;
-    margin-top: 60px;
-    transition: transform 0.3s ease; 
-}
-
-/* Efecto hover sutil para el icono */
-.taller-caja:hover .taller-icono {
-    transform: scale(1.1);
-}
-
-/* Capa de color rojo que está oculta por defecto */
 .taller-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-color: var(--rojo-cine);
     color: #ffffff;
     display: flex;
@@ -248,36 +197,20 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
     padding: 30px;
     box-sizing: border-box;
     text-align: center;
-    opacity: 0; /* Totalmente transparente */
-    transform: translateY(20px); /* Ligeramente desplazada hacia abajo */
-    transition: all 0.3s ease-in-out; /* Animación suave */
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: all 0.3s ease-in-out; 
 }
 
-/* Cuando el ratón pasa por encima de la caja, la capa se hace visible y sube a su sitio */
-.taller-caja:hover .taller-overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.taller-overlay-titulo {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px; /* Aumentado un 20% */
-    margin: 0 0 15px 0;
-    color: #ffffff;
-}
-
-.taller-desc {
-    font-size: 17px; /* Aumentado un 20% */
-    line-height: 1.6;
-    font-weight: 300;
-    margin: 0;
-}
+.taller-caja:hover .taller-overlay { opacity: 1; transform: translateY(0); }
+.taller-overlay-titulo { font-family: 'Playfair Display', serif; font-size: 24px; margin: 0 0 15px 0; color: #ffffff; }
+.taller-desc { font-size: 17px; line-height: 1.6; font-weight: 300; margin: 0; }
 
 /* --- ESTILOS PARA LA SECCIÓN DE COLABORADORES --- */
 .colaboradores-contenedor {
     display: flex;
-    justify-content: center; /* Alineación horizontal */
-    align-items: center;      /* Alineación vertical */
+    justify-content: center; 
+    align-items: center;      
     gap: 60px;
     flex-wrap: wrap;
     max-width: 1000px;
@@ -285,185 +218,74 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
     margin-top: 40px;
 }
 
-.colaborador-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none; /* Elimina el subrayado azul del enlace */
-    color: transparent;
-    outline: none;
-    height: 100px;
-    min-width: 180px;
-}
+.colaborador-item { display: flex; align-items: center; justify-content: center; text-decoration: none; color: transparent; outline: none; height: 100px; min-width: 180px; }
+.colaborador-logo { max-height: 80px; max-width: 220px; width: auto; height: auto; object-fit: contain; border: none; display: block; filter: none; opacity: 1; transition: transform 0.3s ease; }
+.colaborador-item:hover .colaborador-logo { transform: scale(1.05); }
 
-.colaborador-logo {
-    max-height: 80px;
-    max-width: 220px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border: none;
-    display: block;
-    filter: none; 
-    opacity: 1;
-    transition: transform 0.3s ease;
-}
-
-/* Efecto de elevación suave al pasar el ratón */
-.colaborador-item:hover .colaborador-logo {
-    transform: scale(1.05);
-}
-
-/* --- ESTILOS PARA REDES SOCIALES (MÁS GRANDES Y CON COLORES ORIGINALES) --- */
+/* --- ESTILOS PARA REDES SOCIALES --- */
 .redes-sociales {
     display: flex;
-    flex-direction: row;        /* Distribución estrictamente horizontal */
-    justify-content: center;   /* Centrado horizontal en la pantalla */
-    align-items: center;       /* Alineación vertical perfecta entre los 3 iconos */
-    gap: 45px;                 /* Espacio amplio entre icono e icono */
-    margin-top: 45px;          /* Distancia adecuada debajo del botón de correo */
+    flex-direction: row;        
+    justify-content: center;   
+    align-items: center;       
+    gap: 45px;                 
+    margin-top: 45px;          
 }
 
-.red-icon-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.red-icon {
-    width: 42px;               /* Iconos notablemente más grandes */
-    height: 42px;
-    display: block;
-}
-
-/* Efecto suave de elevación al pasar el ratón */
-.red-icon-link:hover {
-    transform: scale(1.15) translateY(-3px);
-}
+.red-icon-link { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s ease; }
+.red-icon { width: 42px; height: 42px; display: block; }
+.red-icon-link:hover { transform: scale(1.15) translateY(-3px); }
 
 /* ========================================= */
 /* --- ESTILOS PARA LA PÁGINA DEL CORTO --- */
 /* ========================================= */
 
-.seccion-corto {
-    padding-top: 60px;
-}
+.seccion-corto { padding-top: 60px; }
+.corto-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 50px; }
 
-.corto-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-/* Contenedor central */
 .corto-contenedor-principal {
-    max-width: 1000px; /* Ancho máximo para mantenerlo compacto */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Estructura para que el texto envuelva al cartel */
-.corto-layout-dos-columnas {
-    display: block; /* Quitamos el flex para permitir que el texto fluya */
-}
+.corto-layout-dos-columnas { display: block; }
+.corto-layout-dos-columnas::after { content: ""; display: table; clear: both; }
 
-/* Este truco evita que el contenedor se deforme si el texto es muy corto */
-.corto-layout-dos-columnas::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* El cartel flota a la izquierda */
 .corto-poster {
-    float: left; /* Permite que el texto lo rodee por la derecha */
-    width: 350px; /* Ancho estricto */
+    float: left; 
+    width: 350px; 
     max-width: 100%;
-    margin-right: 40px; /* Separación con el texto a su derecha */
-    margin-bottom: 20px; /* Separación con el texto cuando cae debajo */
+    margin-right: 40px; 
+    margin-bottom: 20px; 
 }
 
 .corto-poster img {
     width: 100%;
-    max-width: 100%; /* Impide que imágenes enormes rompan el contenedor */
+    max-width: 100%; 
     height: auto;
     display: block;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Los textos fluyen naturalmente */
-.corto-textos {
-    display: block;
-    text-align: left;
-}
+.corto-textos { display: block; text-align: left; }
+.corto-textos h3 { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--rojo-cine); margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid var(--rojo-cine); display: inline-block; padding-bottom: 5px; }
+.corto-textos h3:nth-of-type(2) { margin-top: 30px; }
+.corto-texto { font-size: 19px; line-height: 1.8; color: var(--texto-gris); font-weight: 300; margin-bottom: 0; }
 
-/* Títulos de Sinopsis y Ficha Técnica */
-.corto-textos h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: var(--rojo-cine);
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--rojo-cine);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Para que la Ficha técnica tenga espacio extra por arriba respecto a la sinopsis */
-.corto-textos h3:nth-of-type(2) {
-    margin-top: 30px;
-}
-
-.corto-texto {
-    font-size: 19px;
-    line-height: 1.8;
-    color: var(--texto-gris);
-    font-weight: 300;
-    margin-bottom: 0; 
-}
-
-/* Ficha Técnica */
-.ficha-tecnica {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 17px;
-    line-height: 2.2;
-    color: var(--texto-gris);
-}
-
-.ficha-tecnica li {
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-    display: flex; 
-    gap: 15px; 
-}
-
-.ficha-tecnica li strong {
-    color: var(--texto-oscuro);
-    flex: 0 0 180px; /* Ancho fijo para "Dirección:", "Guion:", etc. */
-    font-weight: 600;
-}
+.ficha-tecnica { list-style: none; padding: 0; margin: 0; font-size: 17px; line-height: 2.2; color: var(--texto-gris); }
+.ficha-tecnica li { border-bottom: 1px solid #eaeaea; padding-bottom: 8px; margin-bottom: 8px; display: flex; gap: 15px; }
+.ficha-tecnica li strong { color: var(--texto-oscuro); flex: 0 0 180px; font-weight: 600; }
 
 /* ========================================= */
 /* --- CARUSSELES DE LA PÁGINA DEL CORTO --- */
 /* ========================================= */
 
-.seccion-galeria {
-    padding: 60px 20px 80px 20px;
-    width: 100%;
-}
-
-.text-center {
-    text-align: center;
-}
+.seccion-galeria { padding: 60px 20px 80px 20px; width: 100%; box-sizing: border-box; }
+.text-center { text-align: center; }
 
 .galeria-carrusel {
     display: flex;
@@ -476,17 +298,9 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
     scroll-behavior: smooth;
 }
 
-.galeria-carrusel::-webkit-scrollbar {
-    height: 10px;
-}
-.galeria-carrusel::-webkit-scrollbar-track {
-    background: #e0e0e0; 
-    border-radius: 5px;
-}
-.galeria-carrusel::-webkit-scrollbar-thumb {
-    background: var(--rojo-cine); 
-    border-radius: 5px;
-}
+.galeria-carrusel::-webkit-scrollbar { height: 10px; }
+.galeria-carrusel::-webkit-scrollbar-track { background: #e0e0e0; border-radius: 5px; }
+.galeria-carrusel::-webkit-scrollbar-thumb { background: var(--rojo-cine); border-radius: 5px; }
 
 .galeria-item {
     flex: 0 0 450px;
@@ -498,16 +312,94 @@ ul.lista-contenidos strong { color: var(--texto-oscuro); font-weight: 500; }
     transition: transform 0.3s ease;
 }
 
-.galeria-item:hover {
-    transform: scale(1.02);
-}
+.galeria-item:hover { transform: scale(1.02); }
 
-/* --- Adaptación a Móviles (Responsive) --- */
+/* ========================================= */
+/* --- OPTIMIZACIÓN MÓVIL (RESPONSIVE) --- */
+/* ========================================= */
+
 @media (max-width: 900px) {
+    /* Header y Menú con Scroll Lateral */
+    header {
+        padding: 15px 10px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 5px 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    /* Reducción tipográfica general */
+    .seccion {
+        padding: 60px 15px;
+        min-height: auto;
+        scroll-margin-top: 60px;
+    }
+
+    .seccion-title {
+        font-size: 42px;
+    }
+
+    .seccion-subtitle {
+        font-size: 26px;
+    }
+
+    .seccion-text {
+        font-size: 16px;
+    }
+
+    /* Adaptación Cajas de Talleres */
+    .talleres-contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .taller-caja {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 320px;
+        height: 380px;
+    }
+
+    /* Activación del Overlay en Táctil al pulsar */
+    .taller-caja:active .taller-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Adaptación Botones */
+    .botones {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    /* Adaptación Carrusel Filmoteca */
+    .carrusel-item {
+        flex: 0 0 80%;
+    }
+
+    .carrusel-cartel {
+        height: 300px;
+    }
+
+    /* Página del Corto */
     .corto-poster {
-        float: none; /* Quitamos el flotado en móviles para que se centre */
+        float: none; 
         margin: 0 auto 30px auto; 
-        max-width: 380px;
+        max-width: 320px;
     }
     
     .corto-textos {
